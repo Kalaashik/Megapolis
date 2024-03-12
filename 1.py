@@ -10,4 +10,6 @@ with open('game.txt', encoding='utf-8') as file:
 with open('game_new.csv', 'w', encoding='utf-8', newline='') as file:
     writer = csv.DictWriter(file, fieldnames=['GameName', 'characters', 'nameError', 'date'],  delimiter='$')
     writer.writeheader()
-    writer.writerows()
+    writer.writerows(reader)
+
+
